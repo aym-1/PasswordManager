@@ -1,4 +1,8 @@
-﻿public class PasswordGeneratorTests
+﻿using AndrewCo.LearningProjects.PasswordManager.Tools;
+
+namespace AndrewCo.LearningProjects.PasswordManager.ToolsTests;
+
+public class PasswordGeneratorTests
 {
     [Fact]
     public void GeneratePassword_NegativeLength_ThrowArgumentException()
@@ -42,7 +46,7 @@
         // Assert
         Assert.NotNull(result);
         Assert.Equal(10, result.Length);
-    }      
+    }
 
     [Fact]
     public void GeneratePassword_CheckForAllAllowedCharacters_UsesOnlyAlowedCharacters()
@@ -56,9 +60,9 @@
         // Assert
         var _allowedCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567890-=:;<>[]{}";
         Assert.NotNull(result);
-        foreach(var ch in result)
+        foreach (var ch in result)
         {
             Assert.Contains(ch, _allowedCharacters);
         }
-    }      
+    }
 }
