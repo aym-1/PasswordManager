@@ -1,8 +1,8 @@
 public class PasswordRecord
 {
-    public string Name { get; set; }
-    public string UserName { get; set; }
-    public string Password { get; set; }
-    public string Url { get; set; }
-    public string Notes { get; set; }
+    public required string Name { get; set; }
+    public required string UserName { get; set; }
+    public required string Password { get; set; }
+    public required string Url { get; set; }
+    public required string Notes { get; set; }
 }
